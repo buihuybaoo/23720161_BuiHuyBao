@@ -67,7 +67,6 @@ header {
 .search-bar button {
   padding: 10px 15px;
   background-color: #fff;
-  color: #007bff;
   border: none;
   border-left: 2px solid #ddd;
   border-radius: 0 5px 5px 0;
@@ -76,6 +75,11 @@ header {
   transition: background-color 0.3s;
   white-space: nowrap;
   min-width: max-content;
+}
+
+.search-bar a {
+  text-decoration: none;
+  color: #007bff;
 }
 
 .search-bar button:hover {
