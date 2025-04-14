@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng - Huy Bảo World</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="logo">
+          <a href="../html/trang-chu.html"
+            ><img src="../img/logo.png" alt="Book Space"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button>Tìm kiếm</button>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../html/trang-chu.html">Trang chủ</a></li>
+            <li><a href="../html/cua-hang.html">Cửa hàng</a></li>
+            <li><a href="../html/gio-hang.html">Giỏ hàng</a></li>
+            <li class="has-submenu">
+              <a href="#">Tài khoản <i class="dropdown-icon">▼</i></a>
+              <ul class="sub-menu">
+                <li><a href="#" id="openLogin">Đăng nhập</a></li>
+                <li><a href="#" id="openRegi">Đăng ký</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Mật khẩu:</label>
+            <input type="password" id="loginPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng nhập</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regName">Họ và tên:</label>
+            <input type="text" id="regName" required />
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Mật khẩu:</label>
+            <input type="password" id="regPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="regConfirmPassword">Nhập lại mật khẩu:</label>
+            <input type="password" id="regConfirmPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <section class="cart">
+        <h2>Giỏ Hàng</h2>
+
+        <!-- Nơi JS render danh sách sản phẩm -->
+        <div class="cart-items"></div>
+
+        <!-- Tổng kết giỏ hàng -->
+        <div class="cart-summary">
+          <p><strong>0 sản phẩm</strong></p>
+          <p><strong>0 đ</strong> (Chưa gồm phí vận chuyển)</p>
+          <button class="checkout-button">Tiến hành đặt hàng</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="paymentModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Thông tin thanh toán</h2>
+        <form id="paymentForm">
+          <div class="form-group">
+            <label for="paymentName">Họ và tên:</label>
+            <input type="text" id="paymentName" required />
+          </div>
+          <div class="form-group">
+            <label for="paymentPhone">Số điện thoại:</label>
+            <input type="tel" id="paymentPhone" required />
+          </div>
+          <div class="form-group">
+            <label for="paymentAddress">Địa chỉ nhận hàng:</label>
+            <textarea id="paymentAddress" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="paymentMethod">Phương thức thanh toán:</label>
+            <select id="paymentMethod" required>
+              <option value="">-- Chọn phương thức --</option>
+              <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+              <option value="bank">Chuyển khoản ngân hàng</option>
+              <option value="momo">Ví điện tử MoMo</option>
+            </select>
+          </div>
+          <div class="order-summary">
+            <h3>Tóm tắt đơn hàng</h3>
+            <div class="summary-items"></div>
+            <div class="summary-total">
+              <p>Tổng cộng: <span id="totalAmount">0đ</span></p>
+            </div>
+          </div>
+          <button type="submit" class="btn">Xác nhận đặt hàng</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="../html/gioi-thieu.html">Giới thiệu Book Space</a></li>
+            <li>
+              <a href="../html/dieu-khoan-su-dung.html">Điều khoản sử dụng</a>
+            </li>
+            <li>
+              <a href="../html/chinh-sach-ban-hang.html">Chính sách bán hàng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Liên hệ</h3>
+          <p>Email: 23720161.bao@student.iuh.edu.vn</p>
+          <p>Điện thoại: 0794422071</p>
+        </div>
+        <div class="footer-section">
+          <h3>Kết nối với chúng tôi</h3>
+          <a href="https://www.facebook.com/huybao.1912">Facebook</a>
+          <a href="https://www.instagram.com/bui_huy_baooo/">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Book Space. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

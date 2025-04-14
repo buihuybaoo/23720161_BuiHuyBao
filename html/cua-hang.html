@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cửa Hàng - Book Space</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="logo">
+          <a href="../html/trang-chu.html"
+            ><img src="../img/logo.png" alt="Book Space"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button>Tìm kiếm</button>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../html/trang-chu.html">Trang chủ</a></li>
+            <li><a href="../html/cua-hang.html">Cửa hàng</a></li>
+            <li><a href="../html/gio-hang.html">Giỏ hàng</a></li>
+            <li class="has-submenu">
+              <a href="#">Tài khoản <i class="dropdown-icon">▼</i></a>
+              <ul class="sub-menu">
+                <li><a href="#" id="openLogin">Đăng nhập</a></li>
+                <li><a href="#" id="openRegi">Đăng ký</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Mật khẩu:</label>
+            <input type="password" id="loginPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng nhập</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regName">Họ và tên:</label>
+            <input type="text" id="regName" required />
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Mật khẩu:</label>
+            <input type="password" id="regPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="regConfirmPassword">Nhập lại mật khẩu:</label>
+            <input type="password" id="regConfirmPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <aside>
+        <h3>Danh mục sản phẩm</h3>
+        <ul class="category-filter">
+          <li>
+            <a href="#" class="filter-btn active" data-category="all">Tất cả</a>
+          </li>
+          <li>
+            <a href="#" class="filter-btn" data-category="Sách Văn Học"
+              >Sách văn học</a
+            >
+          </li>
+          <li>
+            <a href="#" class="filter-btn" data-category="Sách Kinh Tế"
+              >Sách kinh tế</a
+            >
+          </li>
+          <li>
+            <a href="#" class="filter-btn" data-category="Truyện tranh"
+              >Truyện tranh</a
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <section class="all-products">
+        <div class="product-list">
+          <div class="product-item">
+            <img
+              src="../img/tron-len-mai-nha-de-khoc.jpg"
+              alt="Sách Trốn Lên Mái Nhà Để Khóc - Tác giả: Nguyễn Nhật Ánh"
+            />
+            <h3>Trốn Lên Mái Nhà Để Khóc</h3>
+            <p class="price">95.000đ</p>
+            <button class="view-details" data-book-id="1">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/toi_thay_hoa_vang_tren_co_xanh.jpg"
+              alt="Sách Tôi Thấy Hoa Vàng Trên Cỏ Xanh - Tác giả: Nguyễn Nhật Ánh"
+            />
+            <h3>Tôi Thấy Hoa Vàng Trên Cỏ Xanh</h3>
+            <p class="price">150,000đ</p>
+            <button class="view-details" data-book-id="2">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/toi_thich_dang_ve_no_luc_cua_chinh_minh.jpg"
+              alt="Sách Tôi Thích Dáng Vẻ Nổ Lực Của Chính Mình - Tác giả: Lily Trương"
+            />
+            <h3>Tôi Thích Dáng Vẻ Nổ Lực Của Chính Mình</h3>
+            <p class="price">99.000đ</p>
+            <button class="view-details" data-book-id="3">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/noi-nao-co-me-noi-ay-la-nha.jpg"
+              alt="Sách Nơi Nào Có Mẹ - Nơi Ấy Là Nhà - Tác giả: Hạ Mer"
+            />
+            <h3>Nơi Nào Có Mẹ - Nơi Ấy Là Nhà</h3>
+            <p class="price">90.000đ</p>
+            <button class="view-details" data-book-id="4">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/ke_toan_via_he.jpg"
+              alt="Sách Kế Toán Vỉa Hè - Thực Hành Báo Cáo Tài Chính Căn Bản Từ Quầy Bán Nước Chanh - Tác giả: Darrell Mullis, Judith Orloff"
+            />
+            <h3>
+              Kế Toán Vỉa Hè - Thực Hành Báo Cáo Tài Chính Căn Bản Từ Quầy Bán
+              Nước Chanh
+            </h3>
+            <p class="price">199,000đ</p>
+            <button class="view-details" data-book-id="5">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/noi-the-nao-de-ban-duoc-hang.png"
+              alt="Sách Nói Thế Nào Để Bán Được Hàng? - Tác giả: Vương Kiến Tứ"
+            />
+            <h3>Nói Thế Nào Để Bán Được Hàng?</h3>
+            <p class="price">119.000đ</p>
+            <button class="view-details" data-book-id="6">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/giu-chan-khach-hang.jpg"
+              alt="Sách Giữ Chân Khách Hàng - Bí Quyết Duy Trì Vòng Lặp Mua Hàng - Tác giả: Noah Fleming"
+            />
+            <h3>Giữ Chân Khách Hàng - Bí Quyết Duy Trì Vòng Lặp Mua Hàng</h3>
+            <p class="price">129.000đ</p>
+            <button class="view-details" data-book-id="7">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/shopee.jpg"
+              alt="Sách Bán Hàng Shopee Thực Chiến Từ A-Z - 36 Chiến Lược Đỉnh Cao Bùng Nổ Doanh Số - Tác giả: Văn Chính"
+            />
+            <h3>
+              Bán Hàng Shopee Thực Chiến Từ A-Z - 36 Chiến Lược Đỉnh Cao Bùng Nổ
+              Doanh Số
+            </h3>
+            <p class="price">249.000đ</p>
+            <button class="view-details" data-book-id="8">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/tho_bay_mau.jpg"
+              alt="Thỏ Bảy Màu Và Những Người Nghĩ Nó Là Bạn"
+            />
+            <h3>Thỏ Bảy Màu Và Những Người Nghĩ Nó Là Bạn</h3>
+            <p class="price">99.000đ</p>
+            <button class="view-details" data-book-id="9">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/o_day_co_mot_con_en.jpg"
+              alt="Sách Ở Đây Có Một Con Én - Tác giả: Tuấn Dũng"
+            />
+            <h3>Ở Đây Có Một Con Én</h3>
+            <p class="price">99.000đ</p>
+            <button class="view-details" data-book-id="10">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/nobita_va_ban_giao_huong_dia_cau.jpg"
+              alt="Sách Doraemon - Nobita Và Bản Giao Hưởng Địa Cầu - Tác giả: Fujiko F Fujio , Teruko Utsumi, Kazuaki Imai"
+            />
+            <h3>Doraemon - Nobita Và Bản Giao Hưởng Địa Cầu</h3>
+            <p class="price">119.000đ</p>
+            <button class="view-details" data-book-id="11">Xem thêm</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="../img/mua-he-bat-tan.jpg"
+              alt="Sách Mùa Hè Bất Tận - Tác giả: Lâm Hoàng Trúc"
+            />
+            <h3>Mùa Hè Bất Tận</h3>
+            <p class="price">119.000đ</p>
+            <button class="view-details" data-book-id="12">Xem thêm</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="../html/gioi-thieu.html">Giới thiệu Book Space</a></li>
+            <li>
+              <a href="../html/dieu-khoan-su-dung.html">Điều khoản sử dụng</a>
+            </li>
+            <li>
+              <a href="../html/chinh-sach-ban-hang.html">Chính sách bán hàng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Liên hệ</h3>
+          <p>Email: 23720161.bao@student.iuh.edu.vn</p>
+          <p>Điện thoại: 0794422071</p>
+        </div>
+        <div class="footer-section">
+          <h3>Kết nối với chúng tôi</h3>
+          <a href="https://www.facebook.com/huybao.1912">Facebook</a>
+          <a href="https://www.instagram.com/bui_huy_baooo/">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Book Space. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

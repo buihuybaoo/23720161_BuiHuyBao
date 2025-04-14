@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điều Khoản Sử Dụng - Book Space</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="logo">
+          <a href="../html/trang-chu.html"
+            ><img src="../img/logo.png" alt="Book Space"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button>Tìm kiếm</button>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../html/trang-chu.html">Trang chủ</a></li>
+            <li><a href="../html/cua-hang.html">Cửa hàng</a></li>
+            <li><a href="../html/gio-hang.html">Giỏ hàng</a></li>
+            <li class="has-submenu">
+              <a href="#">Tài khoản <i class="dropdown-icon">▼</i></a>
+              <ul class="sub-menu">
+                <li><a href="#" id="openLogin">Đăng nhập</a></li>
+                <li><a href="#" id="openRegi">Đăng ký</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Mật khẩu:</label>
+            <input type="password" id="loginPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng nhập</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regName">Họ và tên:</label>
+            <input type="text" id="regName" required />
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Mật khẩu:</label>
+            <input type="password" id="regPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="regConfirmPassword">Nhập lại mật khẩu:</label>
+            <input type="password" id="regConfirmPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <h1>Điều khoản sử dụng</h1>
+      <ul>
+        <li>
+          <h3>Tài khoản của khách hàng</h3>
+          <br />
+          <p>
+            Khi đăng ký sử dụng tài khoản trên Book Space, quý khách cần cung
+            cấp cho website các thông tin cá nhân chính xác và đầy đủ nhất. Khi
+            chọn mật khẩu cho tài khoản truy cập, hãy chọn mật khẩu theo cách mà
+            không ai có thể dễ dàng đoán được.
+          </p>
+          <br />
+          <p>
+            Sau khi đăng ký, quý khách chịu trách nhiệm bảo quản mật khẩu và
+            không nên tiết lộ mật khẩu cho bất cứ ai hoặc ủy quyền, cho phép bất
+            cứ người nào sử dụng vào bất cứ mục đích nào. Book Space sẽ luôn coi
+            việc truy cập và sử dụng các dịch vụ trên trang web bằng tên truy
+            cập và mật khẩu của một người nào đó như là việc truy cập và sử dụng
+            các dịch vụ bởi chính khách hàng đó, bất kể tên truy cập và mật khẩu
+            có thể được sử dụng bởi người khác mà chủ sở hữu không biết hoặc
+            không cho phép.
+          </p>
+          <br />
+          <p>
+            Nếu phát hiện bất cứ người nào biết mật khẩu hoặc sử dụng mật khẩu
+            của mình để truy cập và sử dụng các dịch vụ trên trang web, quý
+            khách cần thông báo ngay lập tức cho chúng tôi và thay đổi mật khẩu
+            hoặc yêu cầu website hỗ trợ cài đặt mật khẩu mới.
+          </p>
+          <br />
+        </li>
+        <li>
+          <h3>Quyền Bảo Lưu Và Sử Dụng Thông Tin</h3>
+          <br />
+          <p>
+            Khi truy cập và sử dụng trang web, Book Space có thể bảo lưu các
+            thông tin như các số liệu thống kê quá trình truy cập, các thông tin
+            cá nhân cung cấp cho phuongnam.com khi đăng ký… Các thông tin cá
+            nhân bao gồm họ tên, số điện thoại, địa chỉ email, địa chỉ chỗ ở…
+            Chúng tôi có thể sử dụng các thông tin này vào việc lập kế hoạch,
+            nghiên cứu, thiết kế và tuyên truyền các dịch vụ hoặc cung cấp thông
+            tin cho các cơ quan pháp luật theo yêu cầu của Luật pháp hoặc của
+            Toà án.
+          </p>
+          <br />
+        </li>
+        <li>
+          <h3>Quyền Lợi Bảo Mật Thông Tin Của Khách Hàng</h3>
+          <br />
+          <p>
+            Chúng tôi luôn coi trọng việc bảo mật thông tin và sử dụng các biện
+            pháp tốt nhất để bảo vệ thông tin cũng như việc thanh toán của khách
+            hàng khi sử dụng dịch vụ của website chúng tôi. Quý khách được đảm
+            bảo rằng thông tin cá nhân mà quý khách cung cấp sẽ không được
+            chuyển giao cho bên thứ ba nào khác vì mục đích thương mại. Mọi
+            thông tin cá nhân đều được bảo mật ngoại trừ trường hợp Cơ quan Pháp
+            luật yêu cầu.
+          </p>
+          <br />
+        </li>
+        <li>
+          <h3>Trách Nhiệm Của Khách Hàng</h3>
+          <br />
+          <p>
+            Quý khách không được quyền xâm phạm, xâm nhập, tiếp cận, sử dụng hay
+            tìm cách xâm phạm, xâm nhập, tiếp cận hoặc sử dụng bất kỳ phần nào
+            trong máy chủ của chúng tôi, và/ hoặc bất kỳ khu vực dữ liệu nào nếu
+            không được chúng tôi cho phép.
+          </p>
+          <br />
+          <p>
+            Quý khách không được quyền gửi lên hoặc truyền phát bất kỳ thông tin
+            bất hợp pháp, lừa gạt, bôi nhọ, sỉ nhục, tục tĩu, khiêu dâm, xúc
+            phạm, đe dọa, lăng mạ, thù hận, kích động… hoặc trái với chuẩn mực
+            đạo đức chung của xã hội dưới bất kì hình thức nào, bao gồm cả việc
+            truyền bá hay khuyến khích những hành vi có thể cấu thành tội phạm
+            hay vi phạm bất cứ điều khoản nào của luật pháp địa phương, quốc gia
+            hay quốc tế. Chúng tôi tôn trọng quyền tự do ngôn luận, nhưng cũng
+            bảo lưu việc có toàn quyền lược bớt, hoặc xoá bỏ một phần hoặc toàn
+            bộ nội dung nào các bạn đưa lên, bất kể việc vi phạm đó là rõ ràng
+            hay chỉ là hàm ý.
+          </p>
+          <br />
+          <p>
+            Quý khách không được phép gửi hoặc truyền bất kỳ thông điệp nào mang
+            tính quảng cáo, mời gọi, thư dây chuyền, cơ hội đầu tư hay bất kỳ
+            dạng liên lạc có mục đích thương mại nào mà người dùng không mong
+            muốn.
+          </p>
+          <br />
+          <p>
+            Chúng tôi có toàn quyền, vào mọi lúc, cấm hoặc từ chối truy cập của
+            bạn vào Book Space hoặc bất kỳ phần nào của website ngay lập tức mà
+            không cần báo trước nếu chúng tôi cho rằng bạn đã vi phạm bất kỳ
+            điều khoản nào trong bản Quy định này, hoặc việc cấm truy cập xuất
+            phát từ nhận định của chúng tôi, khi chúng tôi cho rằng từ chối đó
+            phù hợp và cần thiết trong thẩm quyền của chúng tôi.
+          </p>
+          <br />
+        </li>
+        <li>
+          <h3>Đơn Hàng Và Giá Cả</h3>
+          <br />
+          <p>
+            Chúng tôi cam kết sẽ cung cấp thông tin giá cả chính xác nhất cho
+            người mua hàng. Tuy nhiên, đôi lúc vẫn có sai sót xảy ra, ví dụ như
+            trường hợp giá sản phẩm không hiển thị chính xác trên web hoặc sản
+            phẩm đó không có ưu đãi khuyến mãi, tùy theo từng trường hợp chúng
+            tôi sẽ chủ động liên hệ hướng dẫn hoặc thông báo hủy đơn hàng đó cho
+            quý khách nếu quý khách không có nhu cầu tiếp tục mua sản phẩm đó.
+          </p>
+          <br />
+        </li>
+        <li>
+          <h3>Luật Pháp Và Thẩm Quyền Tại Lãnh Thổ Việt Nam</h3>
+          <br />
+          <p>
+            Quý khách đồng ý rằng Quy định sử dụng và bất kỳ bất đồng nào phát
+            sinh từ việc bạn sử dụng website này hoặc các sản phẩm và dịch vụ
+            của chúng tôi sẽ được giải quyết theo luật pháp hiện hành của Nước
+            Cộng hoà Xã hội Chủ nghĩa Việt Nam. Thông qua việc đăng ký hoặc sử
+            dụng website và dịch vụ của chúng tôi, quý khách được xem như đã
+            đồng ý và tuân thủ toàn bộ các quy định của Luật pháp Việt Nam.
+          </p>
+          <br />
+          <p>
+            Bằng việc truy cập và sử dụng các dịch vụ của website chúng tôi
+            nghĩa là quý khách đã đồng ý với các điều khoản sử dụng trên đây.
+            Trang web có quyền thay đổi hoặc chỉnh sửa bất kỳ phần nào trong
+            điều khoản mua bán hàng hóa này và các thay đổi có hiệu lực ngay khi
+            được đăng trên trang web mà không cần thông báo trước. Và khi quý
+            khách tiếp tục sử dụng trang web sau khi các thay đổi về điều khoản
+            này được đăng tải, có nghĩa là quý khách chấp nhận với những thay
+            đổi đó.
+          </p>
+          <br />
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="../html/gioi-thieu.html">Giới thiệu Book Space</a></li>
+            <li>
+              <a href="../html/dieu-khoan-su-dung.html">Điều khoản sử dụng</a>
+            </li>
+            <li>
+              <a href="../html/chinh-sach-ban-hang.html">Chính sách bán hàng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Liên hệ</h3>
+          <p>Email: 23720161.bao@student.iuh.edu.vn</p>
+          <p>Điện thoại: 0794422071</p>
+        </div>
+        <div class="footer-section">
+          <h3>Kết nối với chúng tôi</h3>
+          <a href="https://www.facebook.com/huybao.1912">Facebook</a>
+          <a href="https://www.instagram.com/bui_huy_baooo/">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Book Space. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

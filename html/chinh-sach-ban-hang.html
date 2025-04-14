@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chính Sách Bán Hàng - Book Space</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="logo">
+          <a href="../html/trang-chu.html"
+            ><img src="../img/logo.png" alt="Book Space"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button>Tìm kiếm</button>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../html/trang-chu.html">Trang chủ</a></li>
+            <li><a href="../html/cua-hang.html">Cửa hàng</a></li>
+            <li><a href="../html/gio-hang.html">Giỏ hàng</a></li>
+            <li class="has-submenu">
+              <a href="#">Tài khoản <i class="dropdown-icon">▼</i></a>
+              <ul class="sub-menu">
+                <li><a href="#" id="openLogin">Đăng nhập</a></li>
+                <li><a href="#" id="openRegi">Đăng ký</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Mật khẩu:</label>
+            <input type="password" id="loginPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng nhập</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regName">Họ và tên:</label>
+            <input type="text" id="regName" required />
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Mật khẩu:</label>
+            <input type="password" id="regPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="regConfirmPassword">Nhập lại mật khẩu:</label>
+            <input type="password" id="regConfirmPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <h1>Chính Sách Bán Hàng</h1>
+      <ul>
+        <li>
+          <h3>Sản Phẩm Đảm Bảo Chất Lượng</h3>
+          <br />
+          <ul style="list-style-type: '- '">
+            <li>
+              Chúng tôi cam kết 100% các mặt hàng được bán trên Book Space đều
+              có bản quyền & được ký kết hợp đồng mua bán rõ ràng.
+            </li>
+            <br />
+            <li>
+              Chúng tôi cam kết 100% các sản phẩm đều có xuất xứ từ các nhà phát
+              hành/ nhà cung cấp uy tín, chính hãng & được đảm bảo về chất
+              lượng/ an toàn sức khoẻ.
+            </li>
+            <br />
+          </ul>
+        </li>
+        <li>
+          <h3>Thông báo về việc thay đổi chi phí vận chuyển:</h3>
+          <br />
+          <ul style="list-style-type: '- '">
+            <li>
+              Phí vận chuyển mọi giá trị đơn hàng tại TP.Hồ Chí Minh (các quận
+              nội thành, ngoại thành & các huyện): <span
+                style="color: red; font-weight: bold"
+                >19000đ</span
+              >
+            </li>
+            <br />
+            <li>
+              Phí vận chuyển mọi giá trị đơn hàng có tại các tỉnh/ thành phố
+              khác (ngoài TP.Hồ Chí Minh): <span
+                style="color: red; font-weight: bold"
+                >29000đ</span
+              >
+            </li>
+            <br />
+          </ul>
+        </li>
+        <li>
+          <h3>Khiếu Nại/Hoàn Tiền</h3>
+          <ul style="list-style-type: '- '">
+            <li>
+              Trong trường hợp hàng bị hư hỏng trong quá trình vận chuyển/ giao
+              hàng, chúng tôi cam kết sẽ giao lại hàng mới cho khách hàng.
+            </li>
+            <br />
+            <li>
+              Trong một số trường hợp vì một số lý do ngoài ý muốn (nguyên nhân
+              đến từ Book Space) chúng tôi sẽ tiến hành thủ tục hoàn lại tiền
+              cho bạn trong vòng 7 - 20 ngày làm việc kể từ ngày thông báo hoàn
+              tiền.
+            </li>
+            <br />
+          </ul>
+          <p>
+            Trong một số trường hợp vì một số lý do ngoài ý muốn (nguyên nhân
+            đến từ Book Space) chúng tôi sẽ tiến hành thủ tục hoàn lại tiền cho
+            bạn trong vòng 7 - 20 ngày làm việc kể từ ngày thông báo hoàn tiền.
+          </p>
+          <br />
+          <ul style="list-style-type: '- '">
+            <li>
+              Điện thoại:
+              <span style="color: red; font-weight: bold">0794422071</span>
+            </li>
+            <br />
+            <li>Email: 23720161.bao@student.iuh.edu.vn</li>
+            <br />
+          </ul>
+        </li>
+        <li>
+          <h3>Thời Gian Làm Việc:</h3>
+          <br />
+          <p>Thứ 2 - thứ 6: từ 8h - 17h</p>
+          <br />
+          <p>Thứ 7: từ 8h – 12h</p>
+          <br />
+          <p>
+            Chúng tôi cam kết sẽ liên hệ bạn để tư vấn & hỗ trợ mọi thắc mắc,
+            khiếu nại trong thời gian sớm nhất.
+          </p>
+          <br />
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="../html/gioi-thieu.html">Giới thiệu Book Space</a></li>
+            <li>
+              <a href="../html/dieu-khoan-su-dung.html">Điều khoản sử dụng</a>
+            </li>
+            <li>
+              <a href="../html/chinh-sach-ban-hang.html">Chính sách bán hàng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Liên hệ</h3>
+          <p>Email: 23720161.bao@student.iuh.edu.vn</p>
+          <p>Điện thoại: 0794422071</p>
+        </div>
+        <div class="footer-section">
+          <h3>Kết nối với chúng tôi</h3>
+          <a href="https://www.facebook.com/huybao.1912">Facebook</a>
+          <a href="https://www.instagram.com/bui_huy_baooo/">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Book Space. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

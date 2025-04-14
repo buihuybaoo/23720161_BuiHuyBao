@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điều Khoản Sử Dụng - Book Space</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <div class="logo">
+          <a href="../html/trang-chu.html"
+            ><img src="../img/logo.png" alt="Book Space"
+          /></a>
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Tìm kiếm..." />
+          <button>Tìm kiếm</button>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../html/trang-chu.html">Trang chủ</a></li>
+            <li><a href="../html/cua-hang.html">Cửa hàng</a></li>
+            <li><a href="../html/gio-hang.html">Giỏ hàng</a></li>
+            <li class="has-submenu">
+              <a href="#">Tài khoản <i class="dropdown-icon">▼</i></a>
+              <ul class="sub-menu">
+                <li><a href="#" id="openLogin">Đăng nhập</a></li>
+                <li><a href="#" id="openRegi">Đăng ký</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Mật khẩu:</label>
+            <input type="password" id="loginPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng nhập</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regName">Họ và tên:</label>
+            <input type="text" id="regName" required />
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Mật khẩu:</label>
+            <input type="password" id="regPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="regConfirmPassword">Nhập lại mật khẩu:</label>
+            <input type="password" id="regConfirmPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <h1>Giới thiệu về Book Space</h1>
+      <p>
+        <strong>Book Space</strong> là một nền tảng bán sách trực tuyến được xây
+        dựng với mục tiêu tạo ra một không gian thân thiện, hiện đại và dễ sử
+        dụng cho những người yêu sách. Chúng tôi tin rằng mỗi cuốn sách là một
+        hành tinh nhỏ chứa đựng tri thức, cảm xúc và những câu chuyện kỳ diệu –
+        và Book Space chính là nơi để bạn bắt đầu hành trình khám phá không gian
+        ấy.
+      </p>
+      <br />
+
+      <p>
+        Trang web được thiết kế nhằm mang lại trải nghiệm mua sắm thuận tiện
+        nhất: tìm kiếm sách nhanh chóng, giao diện tối giản dễ sử dụng, và đặc
+        biệt là giỏ hàng thông minh giúp bạn quản lý sách mình yêu thích một
+        cách dễ dàng. Dù bạn đang tìm kiếm một cuốn tiểu thuyết thư giãn cuối
+        tuần, một tài liệu học thuật chuyên sâu, hay một cuốn sách truyền cảm
+        hứng về cuộc sống – Book Space đều sẵn sàng phục vụ bạn.
+      </p>
+      <br />
+
+      <p>
+        Chúng tôi liên tục cập nhật các đầu sách mới, các chương trình khuyến
+        mãi hấp dẫn và nhiều tính năng tiện ích khác nhằm phục vụ cộng đồng đọc
+        sách ngày càng tốt hơn. Đồng thời, đội ngũ phát triển cũng luôn lắng
+        nghe góp ý từ người dùng để không ngừng hoàn thiện nền tảng này.
+      </p>
+      <br />
+
+      <p>
+        <strong>Book Space</strong> không chỉ là nơi để bạn mua sách – mà còn là
+        một phần trong hành trình nuôi dưỡng thói quen đọc và khám phá thế giới
+        qua từng trang giấy.
+      </p>
+      <br />
+
+      <p>
+        Xin cảm ơn bạn đã ghé thăm Book Space. Chúng tôi hy vọng bạn sẽ có những
+        trải nghiệm thật tuyệt vời tại đây!
+      </p>
+      <br />
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Về chúng tôi</h3>
+          <ul>
+            <li><a href="../html/gioi-thieu.html">Giới thiệu Book Space</a></li>
+            <li>
+              <a href="../html/dieu-khoan-su-dung.html">Điều khoản sử dụng</a>
+            </li>
+            <li>
+              <a href="../html/chinh-sach-ban-hang.html">Chính sách bán hàng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Liên hệ</h3>
+          <p>Email: 23720161.bao@student.iuh.edu.vn</p>
+          <p>Điện thoại: 0794422071</p>
+        </div>
+        <div class="footer-section">
+          <h3>Kết nối với chúng tôi</h3>
+          <a href="https://www.facebook.com/huybao.1912">Facebook</a>
+          <a href="https://www.instagram.com/bui_huy_baooo/">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Book Space. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>
