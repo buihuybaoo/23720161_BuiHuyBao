@@ -21,7 +21,7 @@
         </div>
 
         <nav class="main-nav">
-          <ul>
+          <ul class="menu">
             <li><a href="../html/trang-chu.html">Trang chủ</a></li>
             <li><a href="../html/cua-hang.html">Cửa hàng</a></li>
             <li><a href="../html/gio-hang.html">Giỏ hàng</a></li>
@@ -51,6 +51,40 @@
             <input type="password" id="loginPassword" required />
           </div>
           <button type="submit" class="btn">Đăng nhập</button>
+          <p>
+            Chưa có tài khoản?
+            <a href="#" id="openRegi" class="switch">Đăng ký</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regName">Họ và tên:</label>
+            <input type="text" id="regName" required />
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Mật khẩu:</label>
+            <input type="password" id="regPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="regConfirmPassword">Nhập lại mật khẩu:</label>
+            <input type="password" id="regConfirmPassword" required />
+          </div>
+          <button type="submit" class="btn">Đăng ký</button>
+          <p>
+            Đã có tài khoản?
+            <a href="#" id="openLogin" class="switch">Đăng nhập</a>
+          </p>
         </form>
       </div>
     </div>

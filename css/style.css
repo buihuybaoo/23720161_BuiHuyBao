@@ -571,13 +571,17 @@ input[type="number"] {
 }
 
 .no-orders {
-  text-align: right;
-  padding: 20px;
+  text-align: center;
   color: #666;
 }
 
 .no-orders p {
-  text-align: center;
+  padding: 20px;
+}
+
+.no-orders button,
+.no-orders a {
+  width: 300px;
 }
 
 /* ========== BOOK DETAILS PAGE ========== */

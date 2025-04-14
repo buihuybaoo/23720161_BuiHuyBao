@@ -495,6 +495,13 @@ const ModalController = {
 
   openPaymentModal(e) {
     e.preventDefault();
+
+    const currentUser = UserManager.getCurrentUser();
+    if (!currentUser) {
+      Utils.showAlert("Bạn cần đăng nhập để thanh toán!");
+      return;
+    }
+
     if (cart.length === 0) {
       Utils.showAlert("Không có sản phẩm nào để thanh toán!");
       return;
@@ -536,8 +543,14 @@ const ModalController = {
       return;
     }
 
+    const currentUser = UserManager.getCurrentUser();
+    if (!currentUser) {
+      Utils.showAlert("Bạn cần đăng nhập để mua hàng!");
+      return;
+    }
+
     const orderData = {
-      customer: { name, phone, address },
+      customer: { name, phone, address, email: currentUser.email },
       paymentMethod: method,
       items: cart,
       total: CartManager.getTotalPrice(),
@@ -698,8 +711,10 @@ const UserManager = {
 
     if (!currentUser) {
       orderList.innerHTML = `
-        <p class="no-orders">Vui lòng đăng nhập để xem lịch sử mua hàng</p>
+      <div class="no-orders">
+        <p>Vui lòng đăng nhập để xem lịch sử mua hàng</p>
         <button onclick="ModalController.openModal(event, 'loginModal')" class="btn">Đăng nhập ngay</button>
+      </div>
       `;
       return;
     }
@@ -724,12 +739,7 @@ const UserManager = {
         const orderItems = order.items
           .map(
             (item) => `
-            <div class="order-item" 
-                 data-id="${item.id}" 
-                 data-title="${item.title}" 
-                 data-price="${item.price}" 
-                 data-image="${item.image}"
-                 data-quantity="${item.quantity}">
+            <div class="order-item">
               <img src="${item.image}" alt="${item.title}">
               <div class="item-details">
                 <h3>${item.title}</h3>
@@ -752,15 +762,18 @@ const UserManager = {
       })
       .join("");
 
+    // Thêm sự kiện cho nút "Mua lại"
     document.querySelectorAll(".reorder-button").forEach((button) => {
       button.addEventListener("click", function (e) {
         e.preventDefault();
         const bookId = this.getAttribute("data-id");
         const quantity = parseInt(this.getAttribute("data-quantity")) || 1;
 
+        // Reset giỏ hàng
         cart = [];
         CartManager.save();
 
+        // Thêm sản phẩm vào giỏ hàng và mở modal thanh toán
         if (CartManager.add(bookId, quantity)) {
           ModalController.openPaymentModal(e);
         }
