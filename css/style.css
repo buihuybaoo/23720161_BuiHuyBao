@@ -748,6 +748,68 @@ input[type="number"] {
   color: #333;
 }
 
+#invoiceModal {
+  display: none; /* Ẩn modal theo mặc định */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#invoiceModal .modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#invoiceModal .modal-content h2 {
+  margin-bottom: 20px;
+}
+
+#invoiceModal .modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+#invoiceModal .modal-content th,
+#invoiceModal .modal-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#invoiceModal .modal-content th {
+  background-color: #f2f2f2;
+}
+
+#invoiceModal .modal-content .total {
+  font-weight: bold;
+  text-align: right;
+}
+
+#closeInvoiceBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#closeInvoiceBtn:hover {
+  background-color: #0056b3;
+}
+
 /* ========== FORM STYLES ========== */
 form p {
   text-align: center;
@@ -770,6 +832,16 @@ form p {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+}
+
+.form-group label {
+  position: relative;
+}
+
+.form-group label input {
+  position: absolute;
+  top: 30%;
+  right: 25%;
 }
 
 .switch {

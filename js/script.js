@@ -529,32 +529,95 @@ const ModalController = {
     const phone = document.getElementById("paymentPhone").value;
     const address = document.getElementById("paymentAddress").value;
     const method = document.getElementById("paymentMethod").value;
-    const email = document.getElementById("paymentEmail").value;
+    const generateInvoice = document.getElementById("generateInvoice").checked;
 
-    if (!name || !phone || !address || !method || !email) {
+    if (!name || !phone || !address || !method) {
       Utils.showAlert("Vui lòng điền đầy đủ thông tin!");
       return;
     }
 
-    const currentUser = UserManager.getCurrentUser();
     const orderData = {
-      customer: { name, phone, address, email },
+      customer: { name, phone, address },
       paymentMethod: method,
       items: cart,
       total: CartManager.getTotalPrice(),
       date: new Date().toISOString(),
     };
 
+    // Lưu đơn hàng vào localStorage
     const orders = JSON.parse(localStorage.getItem("orders") || "[]");
     orders.push(orderData);
     localStorage.setItem("orders", JSON.stringify(orders));
 
+    // Xóa giỏ hàng
     cart = [];
     CartManager.save();
     CartManager.updateUI();
 
+    // Hiển thị hóa đơn nếu checkbox được chọn
+    if (generateInvoice) {
+      this.showInvoiceModal(orderData);
+    }
+
     this.closeAllModals();
     Utils.showAlert("Đặt hàng thành công!");
+  },
+
+  showInvoiceModal(order) {
+    const invoiceModal = document.getElementById("invoiceModal");
+    const invoiceContent = document.getElementById("invoiceContent");
+
+    if (!invoiceModal || !invoiceContent) return;
+
+    // Tạo nội dung hóa đơn
+    const content = `
+      <p><strong>Họ và tên:</strong> ${order.customer.name}</p>
+      <p><strong>Số điện thoại:</strong> ${order.customer.phone}</p>
+      <p><strong>Địa chỉ:</strong> ${order.customer.address}</p>
+      <p><strong>Phương thức thanh toán:</strong> ${order.paymentMethod}</p>
+      <p><strong>Ngày đặt hàng:</strong> ${new Date(
+        order.date
+      ).toLocaleString()}</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${order.items
+            .map(
+              (item) => `
+                <tr>
+                  <td>${item.title}</td>
+                  <td>${item.quantity}</td>
+                  <td>${Utils.formatPrice(item.price)}</td>
+                  <td>${Utils.formatPrice(item.price * item.quantity)}</td>
+                </tr>
+              `
+            )
+            .join("")}
+        </tbody>
+      </table>
+      <p class="total">Tổng cộng: ${Utils.formatPrice(order.total)}</p>
+    `;
+
+    // Hiển thị nội dung hóa đơn trong modal
+    invoiceContent.innerHTML = content;
+    invoiceModal.style.display = "flex";
+
+    // Đóng modal khi nhấn nút "Đóng"
+    document.getElementById("closeInvoiceBtn").addEventListener("click", () => {
+      invoiceModal.style.display = "none";
+    });
+
+    // Đóng modal khi nhấn nút "X" ở góc
+    invoiceModal.querySelector(".close").addEventListener("click", () => {
+      invoiceModal.style.display = "none";
+    });
   },
 };
 
