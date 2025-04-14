@@ -579,16 +579,22 @@ const UserManager = {
   updateUserMenu() {
     const user = this.getCurrentUser();
     const accountMenu = document.querySelector(".has-submenu .sub-menu");
+    const accountLink = document.querySelector(".has-submenu > a");
 
-    if (!accountMenu) return;
+    if (!accountMenu || !accountLink) return;
 
     if (user) {
+      accountLink.innerHTML = `
+        <span class="user-name">${user.name}</span> <i class="dropdown-icon">▼</i>
+      `;
+
       accountMenu.innerHTML = `
-        <li><a href="#" class="user-info">Xin chào! ${user.name}</a></li>
         <li><a href="../html/lich-su-mua-hang.html">Lịch sử mua hàng</a></li>
         <li><a href="#" id="logout">Đăng xuất</a></li>
       `;
     } else {
+      accountLink.innerHTML = `Tài khoản <i class="dropdown-icon">▼</i>`;
+
       accountMenu.innerHTML = `
         <li><a href="#" id="openLogin">Đăng nhập</a></li>
         <li><a href="#" id="openRegi">Đăng ký</a></li>
@@ -641,8 +647,10 @@ const UserManager = {
 
     if (userOrders.length === 0) {
       orderList.innerHTML = `
-        <p class="no-orders">Bạn chưa có đơn hàng nào.</p>
-        <a href="../html/cua-hang.html" class="btn">Mua sắm ngay</a>
+        <div class="no-orders">
+          <p>Không có đơn hàng nào.</p>
+          <a href="../html/cua-hang.html" class="btn">Mua sắm ngay</a>
+        </div>
       `;
       return;
     }
