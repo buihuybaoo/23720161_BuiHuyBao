@@ -183,10 +183,6 @@ main {
   border-radius: 20px;
 }
 
-.banner img:hover {
-  transform: scale(1.05);
-}
-
 .categories,
 .featured-products,
 .all-products {
